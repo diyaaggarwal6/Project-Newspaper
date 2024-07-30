@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="300.0" minWidth="450.0" style="-fx-background-color: #030307;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PaperMaster.Paper_FormController">
+   <children>
+      <Text fill="WHITE" layoutX="179.0" layoutY="47.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" text="PAPER">
+         <font>
+            <Font name="Cambria Bold" size="35.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnupdate" layoutX="167.0" layoutY="244.0" mnemonicParsing="false" onAction="#doupdate" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #302455;" text="Update" textFill="#f8f8f8">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsave" layoutX="28.0" layoutY="244.0" mnemonicParsing="false" onAction="#dosave" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #302455;" text="Save" textFill="#f8f8f8">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnremove" layoutX="306.0" layoutY="243.0" mnemonicParsing="false" onAction="#doremove" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #302455;" text="Remove" textFill="#f8f8f8">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtrate" layoutX="148.0" layoutY="169.0" prefHeight="31.0" prefWidth="187.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="72.0" layoutY="173.0" text="Rate" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="111.0" text="Paper" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combopaper" editable="true" layoutX="148.0" layoutY="107.0" onAction="#docombopaper" prefHeight="31.0" prefWidth="187.0" />
+   </children>
+</AnchorPane>
