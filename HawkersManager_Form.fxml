@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600." maxWidth="500.0" minHeight="600.0" minWidth="500.0" style="-fx-background-color: #030307;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HawkerManager.HawkersManager_FormController">
+   <children>
+      <Text fill="WHITE" layoutX="36.0" layoutY="49.0" stroke="#fcfcfc" strokeLineCap="ROUND" strokeLineJoin="ROUND" text="HAWKER'S  REGISTRATION">
+         <font>
+            <Font name="Cambria Bold" size="35.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="193.0" layoutY="100.0" prefHeight="24.0" prefWidth="66.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnregister" layoutX="40.0" layoutY="539.0" mnemonicParsing="false" onAction="#doregister" style="-fx-background-color: #302455;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnfetch" layoutX="296.0" layoutY="148.0" mnemonicParsing="false" onAction="#dofetch" prefHeight="24.0" prefWidth="98.0" style="-fx-background-color: #302455;" text="Fetch" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnleft" layoutX="345.0" layoutY="539.0" mnemonicParsing="false" onAction="#doleft" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: #302455;" text="Left" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnchange" layoutX="186.0" layoutY="539.0" mnemonicParsing="false" onAction="#dochange" prefHeight="38.0" prefWidth="117.0" style="-fx-background-color: #302455;" text="Change" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="23.0" layoutY="285.0" prefHeight="24.0" prefWidth="105.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="413.0" prefHeight="24.0" prefWidth="105.0" text="Contact " textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="257.0" layoutY="413.0" prefHeight="24.0" prefWidth="105.0" text="Area" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="468.0" prefHeight="24.0" prefWidth="139.0" text="Selected Areas" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="360.0" prefHeight="24.0" prefWidth="105.0" text="Aadhar No." textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboname" editable="true" layoutX="259.0" layoutY="96.0" onAction="#docomboname" prefHeight="31.0" prefWidth="202.0" visibleRowCount="20" />
+      <TextField fx:id="txtcontact" layoutX="127.0" layoutY="409.0" prefHeight="31.0" prefWidth="117.0" />
+      <TextField fx:id="txtaadhar" layoutX="126.0" layoutY="356.0" prefHeight="31.0" prefWidth="336.0" />
+      <ComboBox fx:id="comboarea" layoutX="313.0" layoutY="411.0" onAction="#doselected" prefWidth="150.0" visibleRowCount="30" />
+      <TextField fx:id="txtselected" layoutX="180.0" layoutY="464.0" onAction="#doselected" prefHeight="31.0" prefWidth="284.0" />
+      <ImageView fx:id="hawkerimage" fitHeight="113.0" fitWidth="139.0" layoutX="39.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnbrowse" layoutX="46.0" layoutY="198.0" mnemonicParsing="false" onAction="#dobrowser" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: #302455;" text="Browse" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="txtaddress" layoutX="126.0" layoutY="262.0" prefHeight="70.0" prefWidth="336.0" />
+   </children>
+</AnchorPane>
