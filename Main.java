@@ -1,4 +1,4 @@
-package AreaMaster;
+package BillCollector;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +12,8 @@ public class Main extends Application
  public void start(@SuppressWarnings("exports") Stage primaryStage) 
    {
 		try {
-				Parent root=(Parent) FXMLLoader.load(getClass().getResource("AreaMaster_Form.fxml")); 
-				Scene scene = new Scene(root,400,200);
+				Parent root=(Parent) FXMLLoader.load(getClass().getResource("BillCollector_Form.fxml")); 
+				Scene scene = new Scene(root,400,400);
 				//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 				primaryStage.setScene(scene);
 				primaryStage.show();
