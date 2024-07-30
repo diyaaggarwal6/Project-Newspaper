@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="700.0" minWidth="750.0" style="-fx-background-color: #030307;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerPanel.CustomerPanel_FormController">
+   <children>
+      <Text fill="WHITE" layoutX="127.0" layoutY="52.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" text="CUSTOMER REGISTRATION">
+         <font>
+            <Font name="Cambria Bold" size="40.0" />
+         </font>
+      </Text>
+      <Label layoutX="35.0" layoutY="145.0" text="Customer Name" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcname" layoutX="195.0" layoutY="142.0" prefHeight="31.0" prefWidth="205.0" />
+      <Label layoutX="64.0" layoutY="216.0" text="Address" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtaddress" layoutX="194.0" layoutY="198.0" prefHeight="62.0" prefWidth="517.0" />
+      <Label layoutX="70.0" layoutY="92.0" text="Contact" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="287.0" text="Area" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="383.0" layoutY="287.0" prefHeight="24.0" prefWidth="161.0" text="Hawker Assigned" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="341.0" prefHeight="23.0" prefWidth="147.0" text="Papers Available" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="207.0" layoutY="341.0" text="Papers Prices" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="417.0" layoutY="341.0" text="Selected Paper" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="572.0" layoutY="341.0" text="Selected Price" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="146.0" text="Date of Start" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datestart" layoutX="542.0" layoutY="141.0" prefHeight="31.0" prefWidth="168.0" />
+      <Button fx:id="btnsave" layoutX="158.0" layoutY="638.0" mnemonicParsing="false" onAction="#btnsave" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #302455;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnupdate" layoutX="305.0" layoutY="638.0" mnemonicParsing="false" onAction="#dobtnupdate" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #302455;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnleft" layoutX="453.0" layoutY="638.0" mnemonicParsing="false" onAction="#doleft" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #302455;" text="Left" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnfetch" layoutX="407.0" layoutY="84.0" mnemonicParsing="false" onAction="#dofetch" prefHeight="0.0" prefWidth="123.0" style="-fx-background-color: #302455;" text="Fetch" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="comboarea" layoutX="195.0" layoutY="284.0" onAction="#docombohawker" prefHeight="31.0" prefWidth="161.0" visibleRowCount="30" />
+      <ComboBox fx:id="combohawker" layoutX="546.0" layoutY="284.0" prefHeight="31.0" prefWidth="161.0" />
+      <ListView fx:id="listprices" layoutX="193.0" layoutY="369.0" prefHeight="249.0" prefWidth="147.0" />
+      <ListView fx:id="listselectedprice" layoutX="566.0" layoutY="369.0" prefHeight="249.0" prefWidth="147.0" />
+      <ListView fx:id="listselectedpaper" layoutX="413.0" layoutY="369.0" onMousePressed="#doremoveselection" prefHeight="249.0" prefWidth="147.0" />
+      <ListView fx:id="listpapers" layoutX="40.0" layoutY="369.0" prefHeight="249.0" prefWidth="147.0" />
+      <TextField fx:id="txtcontact" layoutX="194.0" layoutY="89.0" prefHeight="31.0" prefWidth="183.0" />
+      <Button fx:id="btnprocess" layoutX="349.0" layoutY="475.0" mnemonicParsing="false" onAction="#dofillselection" style="-fx-background-color: #302455;" text="&gt;&gt;" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
